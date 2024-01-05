@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Emotions - Tab Layout</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/Emotion/emotion.css" />
+  </head>
+
+  <body class="bg-gray-200">
+    <!-- Header Section (Navigation) -->
+    <header>
+      <ul id="nav-bar">
+        <li><a class="link" href="../index.html">Home</a></li>
+        <li><a class="link" href="../pages/game.html">Game</a></li>
+        <li>
+          <a class="link" href="../pages/achievement.html">Achievement</a>
+        </li>
+        <li><a class="link" href="../pages/emotion.html">Emotion</a></li>
+      </ul>
+    </header>
+
+    <main class="container mx-auto p-6">
+      <section
+        id="different-emotions"
+        class="bg-gray-100 p-6 rounded-lg shadow-md"
+      >
+        <div class="flex mb-6">
+          <button id="tab-happy" class="tab-btn tab-btn-active">Happy</button>
+          <button id="tab-angry" class="tab-btn">Angry</button>
+          <button id="tab-scared" class="tab-btn">Scared</button>
+          <button id="tab-sorry" class="tab-btn">Sorry</button>
+          <button id="tab-gratitude" class="tab-btn">Gratitude</button>
+        </div>
+        <section id="content-happy" class="tab-content active">
+          <h2 class="text-xl font-bold mb-2">Happy</h2>
+          <p>
+            Feeling happy is like when you have a big smile on your face and
+            your heart feels super duper light and full of joy. It's when you're
+            doing something you really love, like playing with your favorite
+            toy, spending time with friends and family, or even enjoying yummy
+            ice cream on a sunny day. Happy feelings can make you want to laugh,
+            dance, and spread kindness to everyone around you!
+          </p>
+        </section>
+        <section id="content-angry" class="tab-content">
+          <h2 class="text-xl font-bold mb-2">Angry</h2>
+          <p>
+            Feeling angry is like having a big storm inside you. It's when
+            something happens that makes you feel upset, frustrated, or mad. It
+            might be when someone takes your toy without asking or when things
+            don't go the way you want them to. Your face might get all scrunched
+            up, and you might want to stomp your feet or even yell a little bit.
+            Sometimes, it's tough to control, but just like a storm, it doesn't
+            last forever. It's important to find ways to calm down, like taking
+            deep breaths or talking about how you feel with someone you trust.
+          </p>
+        </section>
+        <section id="content-scared" class="tab-content">
+          <h2 class="text-xl font-bold mb-2">Scared</h2>
+          <p>
+            Feeling scared is like when you're watching a really spooky movie,
+            and you suddenly hear a creaky noise in the dark! It's when
+            something makes you feel worried or afraid. Your heart might beat
+            super fast, and you might get butterflies in your tummy. It can
+            happen when you're facing something new or when you imagine
+            something scary. Like when there's a loud thunderstorm or when you
+            think about monsters hiding in your room at night. It's okay to feel
+            scared sometimes! You can feel better by hugging a stuffed animal,
+            talking to someone you trust, or imagining brave superheroes
+            protecting you.
+          </p>
+        </section>
+        <section id="content-sorry" class="tab-content">
+          <h2 class="text-xl font-bold mb-2">Sorry</h2>
+          <p>
+            Feeling sorry is like when you accidentally spill juice on your
+            friend's favorite book or when you do something that makes someone
+            else sad or upset. It's when you wish you could turn back time and
+            make things better. You might feel a little bit guilty or sad
+            because you didn't mean to do something wrong, but it happened
+            anyway. Saying "I'm sorry" is a way to show that you care about how
+            someone else feels and that you didn't mean to hurt them. It's
+            important to apologize and try to make things right by being kind
+            and helpful.
+          </p>
+        </section>
+        <section id="content-gratitude" class="tab-content">
+          <h2 class="text-xl font-bold mb-2">Gratitude</h2>
+          <p>
+            Feeling gratitude is like having a super special happy feeling
+            inside your heart when someone does something nice for you or when
+            something awesome happens. It's when you feel really, really
+            thankful and happy about it! Like when a friend shares their
+            favorite toy with you or when your parents make your favorite meal.
+            It's a warm, fuzzy feeling that makes you want to say "thank you"
+            and do something nice in return. Gratitude is about noticing and
+            appreciating all the good things around you, big or small, and
+            feeling really happy and thankful for them.
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <!-- Footer Section (Terms and Cookies) -->
+    <footer id="footer" class="absolue bottom-0 right-0 left-0">
+      <ul>
+        <li><a class="link" href="">Terms and Conditions</a></li>
+        <li><a class="link" href="">Cookie Policy</a></li>
+        <li><a class="link" href="">Accessibility</a></li>
+        <li><a class="link" href="">Privacy Policy</a></li>
+        <li><a class="link" href="">Copyright</a></li>
+      </ul>
+      <p>Copyright - @student</p>
+    </footer>
+
+    <script src="../scripts/tabController.js"></script>
+  </body>
+</html>

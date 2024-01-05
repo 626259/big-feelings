@@ -1,0 +1,137 @@
+@font-face {
+  font-family: fac;
+  src: url(KGNeatlyPrintedSpaced.ttf);
+}
+
+@font-face {
+  font-family: btn;
+  src: url(MoreSugar-Regular.ttf);
+}
+
+body {
+  font-family: fac;
+  font-size: 2em;
+}
+
+header {
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 50px;
+  background-color: #007bff; /* Blue background color */
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#nav-bar li {
+  display: inline-block;
+  margin-right: 20px;
+}
+#nav-bar li:last-child {
+  margin-right: 0;
+}
+#nav-bar li a {
+  text-decoration: none;
+  color: #fff; /* White text color */
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+#nav-bar li a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+main {
+  margin: 50px;
+}
+
+#game-image {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+#game-image img {
+  width: 60%;
+  margin: 0;
+}
+
+#game-image img:hover {
+  margin: 0;
+  border: 2px solid black;
+}
+
+#banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#play-btn-container {
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#play-btn {
+  background-color: #fb6d4d;
+  font-family: btn;
+  font-size: 1em;
+  padding: 0.3em 2em;
+  border-radius: 1em;
+  border: 0;
+}
+
+#play-btn:hover {
+  color: #fb6d4d;
+  background-color: black;
+}
+
+#play-btn a {
+  text-decoration: none;
+}
+
+#footer {
+  background-color: black;
+  color: white;
+  padding: 1em;
+}
+
+#footer > ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 2em;
+}
+
+#footer a {
+  color: white;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline 2px;
+}
+
+#footer p {
+  text-align: center;
+  margin-top: 2em;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}

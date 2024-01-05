@@ -1,0 +1,41 @@
+@font-face {
+  font-family: fac;
+  src: url(/styles/KGNeatlyPrintedSpaced.ttf);
+}
+
+@font-face {
+  font-family: btn;
+  src: url(/styles/MoreSugar-Regular.ttf);
+}
+
+body {
+  font-family: fac;
+  font-size: 2em;
+}
+
+#footer {
+  background-color: black;
+  color: white;
+  padding: 1em;
+}
+
+#footer > ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 2em;
+}
+
+#footer a {
+  color: white;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline 2px;
+}
+
+#footer p {
+  text-align: center;
+  margin-top: 2em;
+}

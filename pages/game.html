@@ -41,45 +41,9 @@
           <video id="bg-video" autoplay muted loop>
             <source src="../resources/bg-video.mp4" type="video/mp4" />
           </video>
-
-          <!-- Feelings Container -->
-          <div
-            class="feelings-container shadow p-5 my-10 mx-auto"
-            style="width: 500px"
-          >
-            <h1 class="font-bold text-xxl text-center mb-5">
-              Tap on a Feeling to See the Animation!
-            </h1>
-
-            <!-- Feelings List -->
-            <div class="mx-auto flex flex-col gap-5" style="width: 200px">
-              <div
-                class="feeling flex justify-center items-center gap-2 border px-4 py-2 rounded-xl cursor-pointer"
-                onclick="playAnimation('happy')"
-              >
-                <img src="../resources/happy.png" alt="Happy" />
-                <p>Happy</p>
-              </div>
-              <div
-                class="feeling flex justify-center items-center gap-2 border px-4 py-2 rounded-xl cursor-pointer"
-                onclick="playAnimation('sad')"
-              >
-                <img src="../resources/sad.png" alt="Sad" />
-                <p>Sad</p>
-              </div>
-              <div
-                class="feeling flex justify-center items-center gap-2 border px-4 py-2 rounded-xl cursor-pointer"
-                onclick="playAnimation('angry')"
-              >
-                <img src="../resources/angry.png" alt="Angry" />
-                <p>Angry</p>
-              </div>
-              <!-- Add more feelings as needed -->
-            </div>
-          </div>
           <nav class="game-navigation">
             <ul class="game-menu">
-              <li><a id="play-game" href="#">Play</a></li>
+              <li><a id="play-game" href="../pages/play-game.html">Play</a></li>
               <li><a href="../pages/achievement.html">Acheivement</a></li>
               <li><a href="../pages/emotion.html">Learn</a></li>
               <li><a href="../index.html">Quit</a></li>
@@ -101,7 +65,4 @@
       <p>Copyright - @student</p>
     </footer>
   </body>
-
-  <!-- JavaScript for playing animations -->
-  <script src="../scripts/gameScript.js"></script>
 </html>

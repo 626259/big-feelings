@@ -8,6 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/Game/game.css" />
     <link rel="stylesheet" href="../styles/Emotion/emotion.css" />
   </head>
 
@@ -106,6 +107,54 @@
       </section>
     </main>
 
+    <!-- Main Section (Big Feelings Game) -->
+    <main>
+      <div id="main-container flex flex-col">
+        <!-- Background Video of the Game Start -->
+        <div class="bg-video">
+          <video id="bg-video" autoplay muted loop>
+            <source src="../resources/bg-video.mp4" type="video/mp4" />
+          </video>
+
+          <!-- Feelings Container -->
+          <div
+            class="feelings-container shadow p-5 my-10 mx-auto"
+            style="width: 500px"
+          >
+            <h1 class="font-bold text-xxl text-center mb-5">
+              Tap on a Feeling to See the Animation!
+            </h1>
+
+            <!-- Feelings List -->
+            <div class="mx-auto flex flex-col gap-5" style="width: 200px">
+              <div
+                class="feeling flex justify-center items-center gap-2 border px-4 py-2 rounded-xl cursor-pointer"
+                onclick="playAnimation('happy')"
+              >
+                <img src="../resources/happy.png" alt="Happy" />
+                <p>Happy</p>
+              </div>
+              <div
+                class="feeling flex justify-center items-center gap-2 border px-4 py-2 rounded-xl cursor-pointer"
+                onclick="playAnimation('sad')"
+              >
+                <img src="../resources/sad.png" alt="Sad" />
+                <p>Sad</p>
+              </div>
+              <div
+                class="feeling flex justify-center items-center gap-2 border px-4 py-2 rounded-xl cursor-pointer"
+                onclick="playAnimation('angry')"
+              >
+                <img src="../resources/angry.png" alt="Angry" />
+                <p>Angry</p>
+              </div>
+              <!-- Add more feelings as needed -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <!-- Footer Section (Terms and Cookies) -->
     <footer id="footer" class="absolue bottom-0 right-0 left-0">
       <ul>
@@ -119,5 +168,7 @@
     </footer>
 
     <script src="../scripts/tabController.js"></script>
+    <!-- JavaScript for playing animations -->
+    <script src="../scripts/gameScript.js"></script>
   </body>
 </html>

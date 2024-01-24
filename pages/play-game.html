@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion Learning Game</title>
+    <!-- Include Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Include Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+      /* Add custom styles here */
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      #quiz-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      #particles-js {
+        background-color: #1a202c; /* Darkish background color */
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      .option-btn {
+        transition: background-color 0.3s ease;
+      }
+
+      .option-btn:hover {
+        background-color: #e2e8f0;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-200">
+    <!-- Particles.js Background -->
+    <div id="particles-js"></div>
+
+    <!-- Quiz Container -->
+    <main class="h-screen flex justify-center items-center">
+      <div
+        id="quiz-container"
+        class="bg-white p-8 rounded-md shadow-lg"
+        style="width: 90%"
+      >
+        <h1 class="text-3xl font-bold mb-6 text-center">
+          Emotion Learning Quiz
+        </h1>
+
+        <!-- Quiz Question -->
+        <div id="quiz-question" class="mb-8 text-xl font-semibold">
+          What emotion is represented by this?
+        </div>
+
+        <!-- Options -->
+        <div id="options" class="flex flex-col space-y-4"></div>
+
+        <!-- Timer -->
+        <div id="timer" class="text-right text-lg font-medium mb-4"></div>
+
+        <!-- Score and Result -->
+        <div id="score-result" class="text-center"></div>
+
+        <!-- Start Quiz Button -->
+        <button
+          id="start-quiz"
+          class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+        >
+          Start Quiz
+        </button>
+      </div>
+    </main>
+
+    <script src="../scripts/playQuiz.js"></script>
+    <script src="../scripts/custom-particles.js"></script>
+  </body>
+</html>

@@ -1,26 +1,26 @@
 // Quiz data with 7 questions
 const quizData = [
   { question: "Happy", options: ["😊", "😢", "😡", "😴"], correctAnswer: "😊" },
-  { question: "Sad", options: ["😊", "😢", "😡", "😴"], correctAnswer: "😢" },
+  { question: "Sad", options: ["😡", "😊", "😢", "😴"], correctAnswer: "😢" },
   { question: "Angry", options: ["😊", "😢", "😡", "😴"], correctAnswer: "😡" },
   {
     question: "Sleepy",
-    options: ["😊", "😢", "😡", "😴"],
+    options: ["😴", "😢", "😡", "😴"],
     correctAnswer: "😴",
   },
   {
     question: "Excited",
-    options: ["😊", "😢", "😡", "😴"],
-    correctAnswer: "😊",
+    options: ["😊", "😢", "😃", "😊"],
+    correctAnswer: "😃",
   },
   {
     question: "Confused",
-    options: ["😊", "😢", "😡", "😴"],
-    correctAnswer: "😢",
+    options: ["😊", "😡", "😕", "😴"],
+    correctAnswer: "😕",
   },
   {
     question: "Surprised",
-    options: ["😊", "😢", "😡", "😴"],
+    options: ["😊", "😢", "😲", "😴"],
     correctAnswer: "😲",
   },
 ];

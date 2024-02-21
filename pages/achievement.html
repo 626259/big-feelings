@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Big Feelings | Acheivement</title>
+    <title>Big Feelings | Achievement</title>
 
     <!-- Linked CSS file -->
     <link
@@ -11,53 +11,59 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/Achievement/achievement.css" />
-
     <!-- Linked FavIcon -->
     <link
       rel="shortcut icon"
       href="../resources/feedback.png"
       type="image/x-icon"
     />
+    <style>
+      /* Additional CSS styles */
+      .achievement-card {
+        max-width: 400px;
+      }
+    </style>
   </head>
-  <body>
+  <body class="bg-gray-100">
     <!-- Header Section (Navigation) -->
-    <header>
-      <ul id="nav-bar">
-        <li><a class="link" href="../index.html">Home</a></li>
-        <li><a class="link" href="../pages/game.html">Game</a></li>
-        <li>
-          <a class="link" href="../pages/achievement.html">Achievement</a>
-        </li>
-        <li><a class="link" href="../pages/emotion.html">Emotion</a></li>
-      </ul>
+    <header class="py-4">
+      <div class="container mx-auto">
+        <ul id="nav-bar" class="flex justify-center">
+          <li><a class="link" href="../index.html">Home</a></li>
+          <li><a class="link" href="../pages/game.html">Game</a></li>
+          <li>
+            <a class="link" href="../pages/achievement.html">Achievement</a>
+          </li>
+          <li><a class="link" href="../pages/emotion.html">Emotion</a></li>
+        </ul>
+      </div>
     </header>
 
     <!-- Main Section (Achievement) -->
-    <main>
-      <section id="achievements">
-        <h2>Showcase Achievements</h2>
-      </section>
-
-      <section id="achievement-list">
-        <ul>
-          <li>Achievement 01</li>
-          <li>Achievement 02</li>
-          <li>Achievement 03</li>
-        </ul>
+    <main class="container mx-auto h-[600px]">
+      <section id="achievements my-8">
+        <h2 class="text-3xl font-semibold mb-4 text-center">
+          Showcase Achievements
+        </h2>
+        <div id="achievement-list" class="flex justify-center"></div>
       </section>
     </main>
 
     <!-- Footer Section (Terms and Cookies) -->
-    <footer id="footer" class="absolue bottom-0 right-0 left-0">
-      <ul>
-        <li><a class="link" href="">Terms and Conditions</a></li>
-        <li><a class="link" href="">Cookie Policy</a></li>
-        <li><a class="link" href="">Accessibility</a></li>
-        <li><a class="link" href="">Privacy Policy</a></li>
-        <li><a class="link" href="">Copyright</a></li>
-      </ul>
-      <p>Copyright - @student</p>
+    <footer id="footer" class="bg-gray-200 py-4">
+      <div class="container mx-auto">
+        <ul class="flex flex-wrap justify-center">
+          <li class="mx-4"><a class="link" href="">Terms and Conditions</a></li>
+          <li class="mx-4"><a class="link" href="">Cookie Policy</a></li>
+          <li class="mx-4"><a class="link" href="">Accessibility</a></li>
+          <li class="mx-4"><a class="link" href="">Privacy Policy</a></li>
+          <li class="mx-4"><a class="link" href="">Copyright</a></li>
+        </ul>
+        <p class="text-center mt-4">Copyright - @student</p>
+      </div>
     </footer>
+
+    <!-- Linked JavaScript file -->
+    <script src="../scripts/achievement.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-white">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,8 +7,9 @@
 
     <!-- Linked CSS file -->
     <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
       rel="stylesheet"
+      type="text/css"
     />
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/Game/game.css" />
@@ -20,7 +21,7 @@
       type="image/x-icon"
     />
   </head>
-  <body>
+  <body class="bg-white">
     <!-- Header Section (Navigation) -->
     <header>
       <ul id="nav-bar">
@@ -43,7 +44,21 @@
           </video>
           <nav class="game-navigation">
             <ul class="game-menu">
-              <li><a id="play-game" href="../pages/play-game.html">Play</a></li>
+              <li>
+                <details class="dropdown">
+                  <summary class="m-1 btn border-none">Play</summary>
+                  <ul
+                    class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-fit"
+                  >
+                    <li><a href="../pages/quiz-play.html">Quiz Game</a></li>
+                    <li>
+                      <a href="../pages/dragndrop-play.html"
+                        >Drag & Drop Game</a
+                      >
+                    </li>
+                  </ul>
+                </details>
+              </li>
               <li><a href="../pages/achievement.html">Acheivement</a></li>
               <li><a href="../pages/emotion.html">Learn</a></li>
               <li><a href="../index.html">Quit</a></li>
@@ -64,5 +79,7 @@
       </ul>
       <p>Copyright - @student</p>
     </footer>
+    <script src="../scripts/gamePage.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
   </body>
 </html>

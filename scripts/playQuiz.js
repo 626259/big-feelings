@@ -122,6 +122,14 @@ function endQuiz() {
   const timerElement = document.getElementById("timer");
   const startQuizButton = document.getElementById("start-quiz");
 
+  // Check if the current score is higher than the stored highest score
+  const highestScore = localStorage.getItem("highestScore");
+  if (highestScore === null || score > parseInt(highestScore)) {
+    const currentDate = new Date().toLocaleDateString();
+    localStorage.setItem("highestScore", score);
+    localStorage.setItem("highestScoreDate", currentDate);
+  }
+
   scoreResultElement.innerHTML = `
     <p class="text-xl font-semibold mb-4">Quiz Completed!</p>
     <p class="text-lg">Your Score: ${score} / ${quizData.length}</p>

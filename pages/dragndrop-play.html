@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion Learning Game</title>
+    <!-- Linked CSS file -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Include Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+      /* Add custom styles here */
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      #quiz-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      #particles-js {
+        background-color: #1a202c; /* Darkish background color */
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      .option-btn {
+        transition: background-color 0.3s ease;
+      }
+
+      .option-btn:hover {
+        background-color: #e2e8f0;
+      }
+    </style>
+  </head>
+
+  <body class="bg-transparent">
+    <!-- Particles.js Background -->
+    <div id="particles-js"></div>
+
+    <!-- Quiz Container -->
+    <main class="h-screen flex justify-center items-center">
+      <div
+        id="quiz-container"
+        class="bg-white p-8 rounded-md shadow-lg"
+        style="width: 90%"
+      >
+        <h1 class="text-3xl font-bold mb-6 text-center text-black">
+          Under maintenance
+        </h1>
+        <div class="flex justify-center gap-4">
+          <a class="btn btn-primary" href="./quiz-play.html"
+            >Play Quiz Game now</a
+          >
+          <a class="btn btn-secondary" href="./game.html">Go Previous Page</a>
+        </div>
+      </div>
+    </main>
+
+    <script src="../scripts/playQuiz.js"></script>
+    <script src="../scripts/custom-particles.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>

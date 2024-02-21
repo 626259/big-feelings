@@ -40,7 +40,8 @@ body {
   gap: 1rem;
 }
 
-.game-navigation a {
+.game-navigation a,
+.game-navigation summary {
   text-decoration: none;
   color: white;
   background-color: gray;

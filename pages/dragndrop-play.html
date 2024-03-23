@@ -1,71 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Emotion Learning Game</title>
-    <!-- Linked CSS file -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!-- Include Particles.js -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <style>
-      /* Add custom styles here */
-      body {
-        font-family: "Poppins", sans-serif;
-      }
 
-      #quiz-container {
-        max-width: 800px;
-        margin: 0 auto;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emotion Learning Game</title>
+  <!-- Linked CSS file -->
+  <link href="../styles/Game/dragndrop.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Include Draggable.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Draggable.min.js"></script>
+</head>
 
-      #particles-js {
-        background-color: #1a202c; /* Darkish background color */
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-      }
+<body class="bg-gradient-to-br from-purple-400 via-pink-500 to-red-500">
+  <!-- Particles.js Background -->
+  <div id="particles-js" class="absolute inset-0 z-0"></div>
 
-      .option-btn {
-        transition: background-color 0.3s ease;
-      }
+  <!-- Quiz Container -->
+  <main class="min-h-screen flex justify-center items-center">
+    <div class="game-box bg-white rounded-lg shadow-lg p-6 md:p-10 lg:p-16">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center text-gray-800">Emotion Learning Game</h1>
 
-      .option-btn:hover {
-        background-color: #e2e8f0;
-      }
-    </style>
-  </head>
-
-  <body class="bg-transparent">
-    <!-- Particles.js Background -->
-    <div id="particles-js"></div>
-
-    <!-- Quiz Container -->
-    <main class="h-screen flex justify-center items-center">
-      <div
-        id="quiz-container"
-        class="bg-white p-8 rounded-md shadow-lg"
-        style="width: 90%"
-      >
-        <h1 class="text-3xl font-bold mb-6 text-center text-black">
-          Under maintenance
-        </h1>
-        <div class="flex justify-center gap-4">
-          <a class="btn btn-primary" href="./quiz-play.html"
-            >Play Quiz Game now</a
-          >
-          <a class="btn btn-secondary" href="./game.html">Go Previous Page</a>
+      <!-- Emotion Drag and Drop -->
+      <div id="emotion-game" class="flex flex-col md:flex-row justify-center md:justify-between items-center">
+        <div class="emotion-container mb-6 md:mb-0 md:w-1/2 flex flex-col md:flex-row justify-center items-center">
+          <div class="dropzone bg-purple-600 text-white text-lg md:text-xl font-semibold p-4 md:p-6 rounded-md shadow-md mb-4 md:mb-0 md:mr-4"
+              data-emotion="sad">Sad</div>
+          <div class="dropzone bg-yellow-500 text-white text-lg md:text-xl font-semibold p-4 md:p-6 rounded-md shadow-md"
+              data-emotion="happy">Happy</div>
+          <!-- Add more dropzones for other emotions -->
+        </div>
+        <div class="emotion-container w-full md:w-1/2 flex justify-center items-center" id="emotion-images">
+          <img src="../resources/happy.png" alt="happy" class="w-24 h-24 md:w-32 md:h-32 mr-4" />
+          <img src="../resources/sad.png" alt="sad" class="w-24 h-24 md:w-32 md:h-32" />
+          <!-- Add more images for other emotions -->
         </div>
       </div>
-    </main>
 
-    <script src="../scripts/playQuiz.js"></script>
-    <script src="../scripts/custom-particles.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </body>
+      <!-- Score and Timer -->
+      <div class="flex justify-between mt-6">
+        <p id="score" class="text-gray-700 font-semibold">Score: <span id="score-value">0</span></p>
+        <p id="timer" class="text-gray-700 font-semibold">Time: <span id="time-remaining">60</span> seconds</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="../scripts/custom-particles.js"></script>
+  <script src="../scripts/dragndropGame.js"></script>
+</body>
+
 </html>

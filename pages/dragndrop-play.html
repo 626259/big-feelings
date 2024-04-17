@@ -7,6 +7,7 @@
   <title>Emotion Learning Game</title>
   <!-- Linked CSS file -->
   <link href="../styles/Game/dragndrop.css" rel="stylesheet" />
+  <link href="../styles/fireworks.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <!-- Include Draggable.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
@@ -18,36 +19,51 @@
   <div id="particles-js" class="absolute inset-0 z-0"></div>
 
   <!-- Quiz Container -->
-  <main class="min-h-screen flex justify-center items-center">
-    <div class="game-box bg-white rounded-lg shadow-lg p-6 md:p-10 lg:p-16">
+  <main class="min-h-screen flex flex-col justify-center items-center">
+    <a href="../index.html" class="text-white mb-10 rounded-2xl uppercase p-4"
+        style="background-color: rgb(151, 151, 253);">Go to
+      homepage</a>
+    <div class="flex flex-col bg-white rounded-lg shadow-lg p-6 md:p-10 lg:p-16" id="start-game">
+      <button class="rounded text-white p-4" style="background-color: rgb(93, 93, 122);">Start Your Game!!!</button>
+    </div>
+    <div id="game-container" class="game-box bg-white rounded-lg shadow-lg p-6 md:p-10 lg:p-16 hidden">
       <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-center text-gray-800">Emotion Learning Game</h1>
 
       <!-- Emotion Drag and Drop -->
       <div id="emotion-game" class="flex flex-col md:flex-row justify-center md:justify-between items-center">
-        <div class="emotion-container mb-6 md:mb-0 md:w-1/2 flex flex-col md:flex-row justify-center items-center">
-          <div class="dropzone bg-purple-600 text-white text-lg md:text-xl font-semibold p-4 md:p-6 rounded-md shadow-md mb-4 md:mb-0 md:mr-4"
-              data-emotion="sad">Sad</div>
-          <div class="dropzone bg-yellow-500 text-white text-lg md:text-xl font-semibold p-4 md:p-6 rounded-md shadow-md"
-              data-emotion="happy">Happy</div>
-          <!-- Add more dropzones for other emotions -->
+        <div class="emotion-container mb-6 md:mb-0 md:w-1/2 flex flex-wrap gap-3 justify-center items-center"
+            id="dropzone-container">
+          <!-- Dropzone containers will be added dynamically -->
         </div>
         <div class="emotion-container w-full md:w-1/2 flex justify-center items-center" id="emotion-images">
-          <img src="../resources/happy.png" alt="happy" class="w-24 h-24 md:w-32 md:h-32 mr-4" />
-          <img src="../resources/sad.png" alt="sad" class="w-24 h-24 md:w-32 md:h-32" />
-          <!-- Add more images for other emotions -->
+          <!-- Emotion images will be added dynamically -->
         </div>
       </div>
 
       <!-- Score and Timer -->
       <div class="flex justify-between mt-6">
         <p id="score" class="text-gray-700 font-semibold">Score: <span id="score-value">0</span></p>
-        <p id="timer" class="text-gray-700 font-semibold">Time: <span id="time-remaining">60</span> seconds</p>
+        <p id="timer" class="text-gray-700 font-semibold">Time: <span id="time-remaining">30</span> seconds</p>
       </div>
+    </div>
+
+    <!-- Message Containers -->
+    <div id="correct-message" class="message hidden">Correct Match!</div>
+    <div id="incorrect-message" class="message hidden">Incorrect Match!</div>
+    <div id="finish-success-message" class="message hidden">Congratulations! You finished the game.</div>
+    <div id="finish-normal-message" class="message hidden">You couldn't collect all the points!!!</div>
+    <div id="fireworks" class="hidden">
+      <div class="firework"></div>
+      <div class="firework"></div>
+      <div class="firework"></div>
     </div>
   </main>
 
   <script src="../scripts/custom-particles.js"></script>
   <script src="../scripts/dragndropGame.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fireworks.js/dist/fireworks.min.js"></script>
+
+
 </body>
 
 </html>

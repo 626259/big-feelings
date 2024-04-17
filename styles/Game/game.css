@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 @font-face {
   font-family: fac;
   src: url(/styles/KGNeatlyPrintedSpaced.ttf);
@@ -80,7 +84,7 @@ body {
   padding: 1em;
 }
 
-#footer > ul {
+#footer>ul {
   display: flex;
   list-style: none;
   justify-content: center;
